@@ -61,3 +61,8 @@ Amint a játékba beléptünk, az alábbi lehetőségek állnak rendelkezésünk
 
 # Megoldási ötlet
 
+- A játék egy menüszerkezetet tartalmaz, amely a Swing GUI által lesz megvalósítva.
+
+- A játéktér hasonlóan grafikus formában lesz megvalósítva, melyet egérkattintással lehet irányítani, illete változtatni a különböző négyzetekben lévő állapotokat.
+
+- A játékállás, illetve a beállítások külső fájlba menthetőek, azok a játék, illetve a program indulásánál visszaolvashatóak.
