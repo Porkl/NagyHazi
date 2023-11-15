@@ -10,11 +10,11 @@ import javax.swing.JPanel;
 
 public class MainMenu {
 
-    private Window frame;
+    private Window window;
     private JPanel mainPanel = new JPanel(new GridLayout(5,1));
 
-    public MainMenu(Window frame) {
-        this.frame = frame;
+    public MainMenu(Window window) {
+        this.window = window;
 
         JLabel headerLabel = new JLabel("WireWorld", JLabel.CENTER);
         JButton startButton = new JButton("New WireWorld Map");
@@ -51,9 +51,9 @@ public class MainMenu {
 
                 case "Settings":
                     mainPanel.setVisible(false);
-                    frame.remove(mainPanel);
-                    frame.add(frame.getSettingsMenu().getSettingsPanel());
-                    frame.getSettingsMenu().getSettingsPanel().setVisible(true);
+                    window.remove(mainPanel);
+                    window.add(window.getSettingsMenu().getSettingsPanel());
+                    window.getSettingsMenu().getSettingsPanel().setVisible(true);
                     break;
 
                 case "Exit the Game":
