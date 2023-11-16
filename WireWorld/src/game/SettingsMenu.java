@@ -55,6 +55,7 @@ public class SettingsMenu {
                 case "Save":
                     options.setRowCount(Integer.parseInt(rowField.getText()));
                     options.setColumnCount(Integer.parseInt(columnField.getText()));
+                    window.getGameUI().reDrawBoard(options);
                     break;
 
                 case "Back to Main Menu":

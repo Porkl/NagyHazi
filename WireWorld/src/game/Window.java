@@ -22,6 +22,10 @@ public class Window extends JFrame{
         add(mainMenu.getMainPanel());
     }
 
+    public Options getOptions() {
+        return options;
+    }
+    
     public MainMenu getMainMenu() {
         return mainMenu;
     }

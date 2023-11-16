@@ -3,10 +3,12 @@ package game;
 import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.plaf.DimensionUIResource;
 import javax.swing.plaf.basic.BasicArrowButton;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,6 +20,8 @@ public class GameUI {
 
     private int rowCount;
     private int columnCount;
+
+    private JPanel gamePanel;
 
     public GameUI(Window window, Options options) {
         this.window = window;
@@ -50,7 +54,7 @@ public class GameUI {
         gameUIPanel.add(upperPanel, BorderLayout.NORTH);
 
 
-        JPanel gamePanel = new JPanel(new GridLayout(rowCount,columnCount));
+        gamePanel = new JPanel(new GridLayout(rowCount,columnCount));
         GameButtonActionListener gameButtonListener = new GameButtonActionListener();
 
         for (int row = 0; row < rowCount; row++) {
@@ -65,13 +69,35 @@ public class GameUI {
         gameUIPanel.add(gamePanel, BorderLayout.CENTER);
     }
 
+    public void reDrawBoard(Options options) {
+        rowCount = options.getRowCount();
+        columnCount = options.getColumnCount();
+
+        gameUIPanel.remove(gamePanel);
+        gamePanel.removeAll();
+        gamePanel.setLayout(new GridLayout(rowCount, columnCount));
+
+        GameButtonActionListener gameButtonListener = new GameButtonActionListener();
+
+        for (int row = 0; row < rowCount; row++) {
+            for (int col = 0; col < columnCount; col++) {
+                JButton button = new JButton();
+                button.addActionListener(gameButtonListener);
+                button.setBackground(Color.BLACK);
+                gamePanel.add(button);
+            }
+        }
+
+        gameUIPanel.add(gamePanel, BorderLayout.CENTER);
+    }
+
     private class MenuButtonListener implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "Reset Table":
-                    
+                    window.getGameUI().reDrawBoard(window.getOptions());
                     break;
 
                 case "Back to Main Menu":
