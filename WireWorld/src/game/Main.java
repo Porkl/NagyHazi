@@ -2,7 +2,8 @@ package game;
 
 public class Main {
     public static void main (String[] args) {
-        Window gameWindow = new Window();
+        Options options = new Options();
+        Window gameWindow = new Window(options);
         gameWindow.setVisible(true);
     }
 }

@@ -12,13 +12,18 @@ import javax.swing.JTextField;
 public class SettingsMenu {
 
     private Window window;
-    private JPanel settingsPanel = new JPanel(new GridLayout(4, 2));
+    private Options options;
+    private JPanel settingsPanel;
 
-    private JTextField rowField = new JTextField();
-    private JTextField columnField = new JTextField();
+    private JTextField rowField;
+    private JTextField columnField;
     
-    public SettingsMenu(Window window) {
+    public SettingsMenu(Window window, Options options) {
         this.window = window;
+        this.options = options;
+        settingsPanel = new JPanel(new GridLayout(4, 2));
+        rowField = new JTextField();
+        columnField = new JTextField();
 
         JLabel headerLabel = new JLabel("Settings");
         JLabel emptyLabel = new JLabel();
@@ -48,11 +53,8 @@ public class SettingsMenu {
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "Save":
-                    //TODO
-                    Options options = new Options
-                        (Integer.parseInt(rowField.getText()),
-                         Integer.parseInt(columnField.getText()));
-                    
+                    options.setRowCount(Integer.parseInt(rowField.getText()));
+                    options.setColumnCount(Integer.parseInt(columnField.getText()));
                     break;
 
                 case "Back to Main Menu":

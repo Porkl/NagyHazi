@@ -11,10 +11,11 @@ import javax.swing.JPanel;
 public class MainMenu {
 
     private Window window;
-    private JPanel mainPanel = new JPanel(new GridLayout(5,1));
+    private JPanel mainPanel;
 
     public MainMenu(Window window) {
         this.window = window;
+        mainPanel = new JPanel(new GridLayout(5,1));
 
         JLabel headerLabel = new JLabel("WireWorld", JLabel.CENTER);
         JButton startButton = new JButton("New WireWorld Map");
@@ -42,7 +43,10 @@ public class MainMenu {
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "New WireWorld Map":
-                    // startNewGame();
+                    mainPanel.setVisible(false);
+                    window.remove(mainPanel);
+                    window.add(window.getGameUI().getGameUIPanel());
+                    window.getGameUI().getGameUIPanel().setVisible(true);
                     break;
 
                 case "Load Previous Map":
