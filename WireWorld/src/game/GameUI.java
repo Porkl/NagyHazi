@@ -121,10 +121,24 @@ public class GameUI {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(e.getActionCommand());
+
+            JButton b1 = (JButton)e.getSource();
+            b1.setBackground(nextColor(b1.getBackground()));
+            
         }
-    
-        
+
+    }
+
+    private Color nextColor(Color prewiousColor) {
+        if (prewiousColor == Color.BLACK) {
+            return Color.YELLOW;
+        } else if (prewiousColor == Color.YELLOW) {
+            return Color.BLUE;
+        } else if (prewiousColor == Color.BLUE) {
+            return Color.RED;
+        } else {
+            return Color.BLACK;
+        }
     }
 
     public JPanel getGameUIPanel() {
