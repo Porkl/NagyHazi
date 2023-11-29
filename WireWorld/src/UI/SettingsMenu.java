@@ -1,4 +1,4 @@
-package game;
+package UI;
 
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -8,6 +8,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import game.GameFieldMatrix;
+import game.Options;
 
 public class SettingsMenu {
 

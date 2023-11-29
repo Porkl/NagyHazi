@@ -1,6 +1,9 @@
-package game;
+package UI;
 
 import javax.swing.JFrame;
+
+import game.GameFieldMatrix;
+import game.Options;
 
 public class Window extends JFrame{
     private MainMenu mainMenu;

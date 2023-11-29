@@ -1,8 +1,11 @@
-package game;
+package UI;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.plaf.basic.BasicArrowButton;
+
+import game.CellType;
+import game.GameFieldMatrix;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -134,8 +137,16 @@ public class GameUI {
                 for (int col = 0; col < columnCount; col++) {
                     if (buttonGrid[row][col] == e.getSource()) {
                         System.out.println(row + " " + col);
+                        // matrix.getMatrix().get(row).set(col, b1);
                     }
                 }
+            }
+
+            for (ArrayList<CellType> arrayList : matrix.getMatrix()) {
+                for (CellType cellType : arrayList) {
+                    System.out.printf(cellType.toString() + " ");
+                }
+                System.out.println();
             }
         }
         

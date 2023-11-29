@@ -90,6 +90,6 @@ public class GameLogic {
     }
 
     public void updateMatrixTitle(int row, int col) {
-
+        
     }
 }

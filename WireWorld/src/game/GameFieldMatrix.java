@@ -7,13 +7,11 @@ public class GameFieldMatrix {
     private int rowCount;
     private int columnCount;
     private ArrayList<ArrayList<CellType>> matrix;
-    private boolean currentlyPlaying;
 
     public GameFieldMatrix(Options options) {
 
         this.rowCount = options.getRowCount();
         this.columnCount = options.getColumnCount();
-        this.currentlyPlaying = false;
 
         structMatrix(options);
     }

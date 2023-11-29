@@ -1,4 +1,8 @@
-package game;
+package Main;
+
+import UI.Window;
+import game.GameFieldMatrix;
+import game.Options;
 
 public class Main {
     public static void main (String[] args) {
