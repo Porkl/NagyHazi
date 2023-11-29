@@ -19,13 +19,14 @@ public class GameUI {
     private int columnCount;
 
     private JPanel gamePanel;
+    private JButton[][] buttonGrid;
 
     public GameUI(Window window, Options options) {
         this.window = window;
         gameUIPanel = new JPanel(new BorderLayout());
         rowCount = options.getRowCount();
         columnCount = options.getColumnCount();
-
+        buttonGrid = new JButton[rowCount][columnCount];
 
         ActionListener menuButtonListener = new MenuButtonListener();
 
@@ -56,10 +57,10 @@ public class GameUI {
 
         for (int row = 0; row < rowCount; row++) {
             for (int col = 0; col < columnCount; col++) {
-                JButton button = new JButton();
-                button.addActionListener(gameButtonListener);
-                button.setBackground(Color.BLACK);
-                gamePanel.add(button);
+                buttonGrid[row][col] = new JButton();
+                buttonGrid[row][col].addActionListener(gameButtonListener);
+                buttonGrid[row][col].setBackground(Color.BLACK);
+                gamePanel.add(buttonGrid[row][col]);
             }
         }
         
@@ -69,6 +70,7 @@ public class GameUI {
     public void reDrawBoard(Options options) {
         rowCount = options.getRowCount();
         columnCount = options.getColumnCount();
+        buttonGrid = new JButton[rowCount][columnCount];
 
         gameUIPanel.remove(gamePanel);
         gamePanel.removeAll();
@@ -78,10 +80,10 @@ public class GameUI {
 
         for (int row = 0; row < rowCount; row++) {
             for (int col = 0; col < columnCount; col++) {
-                JButton button = new JButton();
-                button.addActionListener(gameButtonListener);
-                button.setBackground(Color.BLACK);
-                gamePanel.add(button);
+                buttonGrid[row][col] = new JButton();
+                buttonGrid[row][col].addActionListener(gameButtonListener);
+                buttonGrid[row][col].setBackground(Color.BLACK);
+                gamePanel.add(buttonGrid[row][col]);
             }
         }
 
@@ -125,6 +127,13 @@ public class GameUI {
             JButton b1 = (JButton)e.getSource();
             b1.setBackground(nextColor(b1.getBackground()));
             
+            for (int row = 0; row < rowCount; row++) {
+                for (int col = 0; col < columnCount; col++) {
+                    if (buttonGrid[row][col] == e.getSource()) {
+                        System.out.println(row + " " + col);
+                    }
+                }
+            }
         }
 
     }
