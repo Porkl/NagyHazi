@@ -9,7 +9,7 @@ public class Main {
         Options options = new Options();
         GameFieldMatrix gameFieldMatrix = new GameFieldMatrix(options);
         // GameLogic gameLogic = new GameLogic(gameFieldMatrix);
-        Window gameWindow = new Window(options, gameFieldMatrix);
+        Window gameWindow = new Window(gameFieldMatrix);
         gameWindow.setVisible(true);
     }
 }

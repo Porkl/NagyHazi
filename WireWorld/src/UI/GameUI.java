@@ -17,7 +17,6 @@ import java.util.ArrayList;
 public class GameUI {
     
     private Window window;
-    private GameFieldMatrix matrix;
 
     private JPanel gameUIPanel;
 
@@ -27,12 +26,11 @@ public class GameUI {
     private int rowCount;
     private int columnCount;
 
-    public GameUI(Window window, GameFieldMatrix matrix) {
+    public GameUI(Window window) {
         this.window = window;
-        this.matrix = matrix;
 
-        rowCount = matrix.getOptions().getRowCount();
-        columnCount = matrix.getOptions().getColumnCount();
+        rowCount = window.getMatrix().getOptions().getRowCount();
+        columnCount = window.getMatrix().getOptions().getColumnCount();
 
         gameUIPanel = new JPanel(new BorderLayout());
         buttonGrid = new JButton[rowCount][columnCount];
@@ -105,7 +103,7 @@ public class GameUI {
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "Reset Table":
-                    window.getGameUI().reDrawBoard(matrix);
+                    window.getGameUI().reDrawBoard(window.getMatrix());
                     window.revalidate();
                     break;
 
@@ -145,7 +143,7 @@ public class GameUI {
                 }
             }
 
-            for (ArrayList<CellType> arrayList : matrix.getMatrix()) {
+            for (ArrayList<CellType> arrayList : window.getMatrix().getMatrix()) {
                 for (CellType cellType : arrayList) {
                     System.out.printf(cellType.toString() + " ");
                 }
