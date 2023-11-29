@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class GameUI {
     
@@ -17,15 +18,17 @@ public class GameUI {
 
     private int rowCount;
     private int columnCount;
+    private GameFieldMatrix matrix;
 
     private JPanel gamePanel;
     private JButton[][] buttonGrid;
 
-    public GameUI(Window window, Options options) {
+    public GameUI(Window window, GameFieldMatrix matrix) {
         this.window = window;
         gameUIPanel = new JPanel(new BorderLayout());
-        rowCount = options.getRowCount();
-        columnCount = options.getColumnCount();
+        rowCount = matrix.getRowCount();
+        columnCount = matrix.getColumnCount();
+        this.matrix = matrix;
         buttonGrid = new JButton[rowCount][columnCount];
 
         ActionListener menuButtonListener = new MenuButtonListener();
@@ -67,9 +70,9 @@ public class GameUI {
         gameUIPanel.add(gamePanel, BorderLayout.CENTER);
     }
 
-    public void reDrawBoard(Options options) {
-        rowCount = options.getRowCount();
-        columnCount = options.getColumnCount();
+    public void reDrawBoard(GameFieldMatrix matrix) {
+        rowCount = matrix.getMatrix().size();
+        columnCount = matrix.getMatrix().get(0).size();
         buttonGrid = new JButton[rowCount][columnCount];
 
         gameUIPanel.remove(gamePanel);
@@ -96,7 +99,7 @@ public class GameUI {
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "Reset Table":
-                    window.getGameUI().reDrawBoard(window.getOptions());
+                    window.getGameUI().reDrawBoard(matrix);
                     window.revalidate();
                     break;
 
@@ -135,7 +138,7 @@ public class GameUI {
                 }
             }
         }
-
+        
     }
 
     private Color nextColor(Color prewiousColor) {

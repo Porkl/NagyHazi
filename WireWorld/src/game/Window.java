@@ -3,27 +3,20 @@ package game;
 import javax.swing.JFrame;
 
 public class Window extends JFrame{
-    private Options options;
-
     private MainMenu mainMenu;
     private SettingsMenu settingsMenu;
     private GameUI gameUI;
 
-    public Window(Options options) {
-        this.options = options;
-        mainMenu = new MainMenu(this);
-        settingsMenu = new SettingsMenu(this, options);
-        gameUI = new GameUI(this, options);
+    public Window(Options options, GameFieldMatrix matrix) {
+        mainMenu = new MainMenu(this, matrix);
+        settingsMenu = new SettingsMenu(this, options, matrix);
+        gameUI = new GameUI(this, matrix);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setTitle("WireWorld");
 
         add(mainMenu.getMainPanel());
-    }
-
-    public Options getOptions() {
-        return options;
     }
     
     public MainMenu getMainMenu() {

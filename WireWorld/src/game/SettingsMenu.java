@@ -13,14 +13,21 @@ public class SettingsMenu {
 
     private Window window;
     private Options options;
-    private JPanel settingsPanel;
+    private GameFieldMatrix matrix;
 
+    private JPanel settingsPanel;
     private JTextField rowField;
     private JTextField columnField;
     
-    public SettingsMenu(Window window, Options options) {
+    public SettingsMenu(Window window, Options options, GameFieldMatrix matrix) {
         this.window = window;
         this.options = options;
+        this.matrix = matrix;
+
+        setupMenuComponents();
+    }
+
+    private void setupMenuComponents() {
         settingsPanel = new JPanel(new GridLayout(4, 2));
         rowField = new JTextField();
         columnField = new JTextField();
@@ -55,7 +62,10 @@ public class SettingsMenu {
                 case "Save":
                     options.setRowCount(Integer.parseInt(rowField.getText()));
                     options.setColumnCount(Integer.parseInt(columnField.getText()));
-                    window.getGameUI().reDrawBoard(options);
+                    matrix.setRowCount(Integer.parseInt(rowField.getText()));
+                    matrix.setColumnCount(Integer.parseInt(columnField.getText()));
+                    matrix.structMatrix(options);
+                    window.getGameUI().reDrawBoard(matrix);
                     break;
 
                 case "Back to Main Menu":

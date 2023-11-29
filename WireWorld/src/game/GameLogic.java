@@ -8,38 +8,15 @@ public class GameLogic {
     private int columnCount;
     private ArrayList<ArrayList<CellType>> matrix;
     private boolean currentlyPlaying;
-    private enum CellType {
-        EMPTY,      // Color: BLACK
-        HEAD,       // Color: BLUE
-        TAIL,       // Color: RED
-        CONDUCTOR   // Color: YELLOW
-    }
-
-
-    public GameLogic(Options options) {
-
-        this.rowCount = options.getRowCount();
-        this.columnCount = options.getColumnCount();
-        matrix = new ArrayList<>();
-        currentlyPlaying = false;
-
-        for (int row = 0; row < rowCount; row++) {
-            ArrayList<CellType> r = new ArrayList<>();
-            for (int col = 0; col < columnCount; col++) {
-                r.add(CellType.EMPTY);
-            }
-            matrix.add(r);
-        }
-
-    }
-
-    public GameLogic(ArrayList<ArrayList<CellType>> matrix, Options options) {
-        
-        this.rowCount = options.getRowCount();
-        this.columnCount = options.getColumnCount();
-        this.matrix = matrix;
-        currentlyPlaying = false;
     
+
+    public GameLogic(GameFieldMatrix matrix) {
+
+        this.rowCount = matrix.getRowCount();
+        this.columnCount = matrix.getColumnCount();
+        this.matrix = matrix.getMatrix();
+        currentlyPlaying = false;
+
     }
 
     public void step() {
@@ -67,6 +44,8 @@ public class GameLogic {
                 }
             }
         }
+
+        matrix = newMatrix;
     }
 
     private CellType fromConductorToHeadOrConductor(ArrayList<ArrayList<CellType>> matrix, int row, int col) {
@@ -85,7 +64,7 @@ public class GameLogic {
                         }
                     }
                 }
-                
+
             }
 
             // Upper right:
@@ -108,5 +87,9 @@ public class GameLogic {
         } else {
             return CellType.CONDUCTOR;
         }
+    }
+
+    public void updateMatrixTitle(int row, int col) {
+
     }
 }
