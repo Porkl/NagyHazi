@@ -1,6 +1,7 @@
 package game;
 
 public class Options {
+    
     private int rowCount;
     private int columnCount;
 

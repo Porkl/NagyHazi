@@ -17,21 +17,24 @@ import java.util.ArrayList;
 public class GameUI {
     
     private Window window;
-    private JPanel gameUIPanel;
-
-    private int rowCount;
-    private int columnCount;
     private GameFieldMatrix matrix;
+
+    private JPanel gameUIPanel;
 
     private JPanel gamePanel;
     private JButton[][] buttonGrid;
 
+    private int rowCount;
+    private int columnCount;
+
     public GameUI(Window window, GameFieldMatrix matrix) {
         this.window = window;
-        gameUIPanel = new JPanel(new BorderLayout());
-        rowCount = matrix.getRowCount();
-        columnCount = matrix.getColumnCount();
         this.matrix = matrix;
+
+        rowCount = matrix.getOptions().getRowCount();
+        columnCount = matrix.getOptions().getColumnCount();
+
+        gameUIPanel = new JPanel(new BorderLayout());
         buttonGrid = new JButton[rowCount][columnCount];
 
         ActionListener menuButtonListener = new MenuButtonListener();
@@ -74,8 +77,8 @@ public class GameUI {
     }
 
     public void reDrawBoard(GameFieldMatrix matrix) {
-        rowCount = matrix.getMatrix().size();
-        columnCount = matrix.getMatrix().get(0).size();
+        rowCount = matrix.getOptions().getRowCount();
+        columnCount = matrix.getOptions().getColumnCount();
         buttonGrid = new JButton[rowCount][columnCount];
 
         gameUIPanel.remove(gamePanel);

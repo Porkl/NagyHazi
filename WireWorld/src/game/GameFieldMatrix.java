@@ -4,36 +4,34 @@ import java.util.ArrayList;
 
 public class GameFieldMatrix {
 
-    private int rowCount;
-    private int columnCount;
+    private Options options;
     private ArrayList<ArrayList<CellType>> matrix;
 
     public GameFieldMatrix(Options options) {
 
-        this.rowCount = options.getRowCount();
-        this.columnCount = options.getColumnCount();
+        this.options = options;
 
-        structMatrix(options);
+        structMatrix(this.options);
     }
 
     public void structMatrix(Options options) {
         this.matrix = new ArrayList<>();
 
-        for (int row = 0; row < rowCount; row++) {
+        for (int row = 0; row < options.getRowCount(); row++) {
             ArrayList<CellType> r = new ArrayList<>();
-            for (int col = 0; col < columnCount; col++) {
+            for (int col = 0; col < options.getColumnCount(); col++) {
                 r.add(CellType.EMPTY);
             }
             matrix.add(r);
         }
     }
 
-    public int getRowCount() {
-        return rowCount;
+    public Options getOptions() {
+        return options;
     }
 
-    public int getColumnCount() {
-        return columnCount;
+    public void setOptions(Options options) {
+        this.options = options;
     }
 
     public ArrayList<ArrayList<CellType>> getMatrix() {
@@ -42,13 +40,5 @@ public class GameFieldMatrix {
 
     public void setMatrix(ArrayList<ArrayList<CellType>> matrix) {
         this.matrix = matrix;
-    }
-
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
-    }
-
-    public void setColumnCount(int columnCount) {
-        this.columnCount = columnCount;
     }
 }

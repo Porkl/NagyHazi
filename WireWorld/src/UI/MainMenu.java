@@ -8,18 +8,14 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import game.GameFieldMatrix;
-
 public class MainMenu {
 
     private Window window;
     private JPanel mainPanel;
-    private GameFieldMatrix matrix;
 
-    public MainMenu(Window window, GameFieldMatrix matrix) {
+    public MainMenu(Window window) {
         this.window = window;
         mainPanel = new JPanel(new GridLayout(5,1));
-        this.matrix = matrix;
 
         JLabel headerLabel = new JLabel("WireWorld", JLabel.CENTER);
         JButton startButton = new JButton("New WireWorld Map");
@@ -49,7 +45,6 @@ public class MainMenu {
                 case "New WireWorld Map":
                     mainPanel.setVisible(false);
                     window.remove(mainPanel);
-                    window.getGameUI().reDrawBoard(matrix);
                     window.add(window.getGameUI().getGameUIPanel());
                     window.getGameUI().getGameUIPanel().setVisible(true);
                     break;

@@ -9,23 +9,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import game.GameFieldMatrix;
 import game.Options;
 
 public class SettingsMenu {
 
     private Window window;
     private Options options;
-    private GameFieldMatrix matrix;
 
     private JPanel settingsPanel;
     private JTextField rowField;
     private JTextField columnField;
     
-    public SettingsMenu(Window window, Options options, GameFieldMatrix matrix) {
+    public SettingsMenu(Window window, Options options) {
         this.window = window;
         this.options = options;
-        this.matrix = matrix;
 
         setupMenuComponents();
     }
@@ -65,10 +62,6 @@ public class SettingsMenu {
                 case "Save":
                     options.setRowCount(Integer.parseInt(rowField.getText()));
                     options.setColumnCount(Integer.parseInt(columnField.getText()));
-                    matrix.setRowCount(Integer.parseInt(rowField.getText()));
-                    matrix.setColumnCount(Integer.parseInt(columnField.getText()));
-                    matrix.structMatrix(options);
-                    window.getGameUI().reDrawBoard(matrix);
                     break;
 
                 case "Back to Main Menu":

@@ -4,17 +4,13 @@ import java.util.ArrayList;
 
 public class GameLogic {
 
-    private int rowCount;
-    private int columnCount;
-    private ArrayList<ArrayList<CellType>> matrix;
+    private GameFieldMatrix gameFieldMatrix;
     private boolean currentlyPlaying;
     
 
     public GameLogic(GameFieldMatrix matrix) {
 
-        this.rowCount = matrix.getRowCount();
-        this.columnCount = matrix.getColumnCount();
-        this.matrix = matrix.getMatrix();
+        this.gameFieldMatrix = gameFieldMatrix;
         currentlyPlaying = false;
 
     }
@@ -22,17 +18,17 @@ public class GameLogic {
     public void step() {
 
         ArrayList<ArrayList<CellType>> newMatrix = new ArrayList<>();
-        for (int row = 0; row < rowCount; row++) {
+        for (int row = 0; row < gameFieldMatrix.getMatrix().size(); row++) {
             ArrayList<CellType> r = new ArrayList<>();
-            matrix.add(r);
+            newMatrix.add(r);
         }
 
 
         CellType cell;
 
-        for (int row = 0; row < matrix.size(); row++) {
-            for (int col = 0; col < matrix.get(row).size(); col++) {
-                cell = matrix.get(row).get(col);
+        for (int row = 0; row < gameFieldMatrix.getMatrix().size(); row++) {
+            for (int col = 0; col < gameFieldMatrix.getMatrix().get(row).size(); col++) {
+                cell = gameFieldMatrix.getMatrix().get(row).get(col);
                 if (cell.equals(CellType.EMPTY)) {
                     newMatrix.get(row).set(col, CellType.EMPTY);
                 } else if (cell.equals(CellType.HEAD)) {
@@ -40,12 +36,12 @@ public class GameLogic {
                 } else if (cell.equals(CellType.TAIL)) {
                     newMatrix.get(row).set(col, CellType.CONDUCTOR);
                 } else {
-                    newMatrix.get(row).set(col, fromConductorToHeadOrConductor(matrix, row, col));
+                    newMatrix.get(row).set(col, fromConductorToHeadOrConductor(gameFieldMatrix.getMatrix(), row, col));
                 }
             }
         }
 
-        matrix = newMatrix;
+        gameFieldMatrix.setMatrix(newMatrix);
     }
 
     private CellType fromConductorToHeadOrConductor(ArrayList<ArrayList<CellType>> matrix, int row, int col) {
@@ -89,7 +85,17 @@ public class GameLogic {
         }
     }
 
+
+
     public void updateMatrixTitle(int row, int col) {
         
+    }
+
+    public boolean isCurrentlyPlaying() {
+        return currentlyPlaying;
+    }
+
+    public void setCurrentlyPlaying(boolean currentlyPlaying) {
+        this.currentlyPlaying = currentlyPlaying;
     }
 }

@@ -11,8 +11,8 @@ public class Window extends JFrame{
     private GameUI gameUI;
 
     public Window(Options options, GameFieldMatrix matrix) {
-        mainMenu = new MainMenu(this, matrix);
-        settingsMenu = new SettingsMenu(this, options, matrix);
+        mainMenu = new MainMenu(this);
+        settingsMenu = new SettingsMenu(this, options);
         gameUI = new GameUI(this, matrix);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
