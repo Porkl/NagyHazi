@@ -1,14 +1,11 @@
 package game;
 
-import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.plaf.DimensionUIResource;
 import javax.swing.plaf.basic.BasicArrowButton;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -98,6 +95,7 @@ public class GameUI {
             switch (e.getActionCommand()) {
                 case "Reset Table":
                     window.getGameUI().reDrawBoard(window.getOptions());
+                    window.revalidate();
                     break;
 
                 case "Back to Main Menu":
@@ -108,10 +106,11 @@ public class GameUI {
                     break;
                 
                 case "||":
-                    
+                    //TODO
                     break;
 
                 default: //PLAY BUTTON!!!
+                    //TODO
                     System.out.println("Hello");
                     break;
             }        
