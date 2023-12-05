@@ -5,13 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import UI.MainMenu;
 import UI.Window;
-import game.CellType;
 import game.GameFieldMatrix;
 import game.GameLogic;
 import game.Options;
