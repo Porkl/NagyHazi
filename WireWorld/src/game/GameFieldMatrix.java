@@ -17,7 +17,7 @@ public class GameFieldMatrix {
     public void structMatrix(Options options) {
         this.matrix = new ArrayList<>();
 
-        // Stazsa a konnzebb kezelhetoseg miatt (+2)
+        // Stazsa a konnyebb kezelhetoseg miatt (+2)
         for (int row = 0; row < options.getRowCount() + 2; row++) {
             ArrayList<CellType> r = new ArrayList<>();
             for (int col = 0; col < options.getColumnCount() + 2; col++) {

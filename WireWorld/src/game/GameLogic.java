@@ -10,7 +10,7 @@ public class GameLogic {
 
     public GameLogic(GameFieldMatrix matrix) {
 
-        this.gameFieldMatrix = gameFieldMatrix;
+        this.gameFieldMatrix = matrix;
         currentlyPlaying = false;
 
     }
