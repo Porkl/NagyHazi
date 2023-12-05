@@ -32,6 +32,13 @@ public class GameLogicTest {
 	}
 
 	@Test
+	public void clickStepTest1() {
+		logic.getGameFieldMatrix().getMatrix().get(1).set(1, CellType.CONDUCTOR);
+		logic.clickStep(1, 1);
+		assertEquals(logic.getGameFieldMatrix().getMatrix().get(1).get(1), CellType.CONDUCTOR);
+	}
+
+	@Test
 	public void stepTest1() {
 		logic.getGameFieldMatrix().getMatrix().get(1).set(1, CellType.CONDUCTOR);
 		logic.step();

@@ -13,7 +13,6 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class GameUI {
     
@@ -169,20 +168,11 @@ public class GameUI {
             for (int row = 0; row < rowCount; row++) {
                 for (int col = 0; col < columnCount; col++) {
                     if (buttonGrid[row][col] == e.getSource()) {
-                        System.out.println(row + " " + col);
                         window.getLogic().clickStep(row, col);
                     }
                 }
             }
-
-            for (ArrayList<CellType> arrayList : window.getLogic().getGameFieldMatrix().getMatrix()) {
-                for (CellType cellType : arrayList) {
-                    System.out.printf(cellType.toString() + " ");
-                }
-                System.out.println();
-            }
         }
-        
     }
 
     private Color nextColor(Color prewiousColor) {

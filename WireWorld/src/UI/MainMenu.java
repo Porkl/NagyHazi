@@ -15,7 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import game.CellType;
-import game.GameFieldMatrix;
 import game.Options;
 
 public class MainMenu {
@@ -61,7 +60,7 @@ public class MainMenu {
                     break;
 
                 case "Load Previous Map":
-                    loadPreviousGame();
+                    loadPreviousGame("SavedMatrix.txt");
                     mainPanel.setVisible(false);
                     window.remove(mainPanel);
                     window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
@@ -77,7 +76,7 @@ public class MainMenu {
                     break;
 
                 case "Exit the Game":
-                    save();
+                    save("SavedMatrix.txt");
                     System.exit(0);
                     break;
 
@@ -87,9 +86,9 @@ public class MainMenu {
         }
     }
 
-    private void save() {
+    public void save(String fileName) {
         try {
-            FileOutputStream f = new FileOutputStream("SavedMatrix.txt");
+            FileOutputStream f = new FileOutputStream(fileName);
             ObjectOutputStream out = new ObjectOutputStream(f);
             out.writeObject(window.getLogic().getGameFieldMatrix().getOptions());
             out.writeObject(window.getLogic().getGameFieldMatrix().getMatrix());
@@ -99,9 +98,9 @@ public class MainMenu {
         }
     } 
 
-    private void loadPreviousGame() {
+    public void loadPreviousGame(String fileName) {
         try {
-            FileInputStream f = new FileInputStream("SavedMatrix.txt");
+            FileInputStream f = new FileInputStream(fileName);
             ObjectInputStream in = new ObjectInputStream(f);
             window.getLogic().getGameFieldMatrix().setOptions((Options)in.readObject());
             window.getLogic().getGameFieldMatrix().setMatrix((ArrayList<ArrayList<CellType>>)in.readObject());
