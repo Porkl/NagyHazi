@@ -86,57 +86,7 @@ public class GameLogic {
         } else {
             return CellType.CONDUCTOR;
         }
-        
-        /*
-        int lastRowIndex = matrix.size();
-        int lastColIndex = matrix.get(0).size();
 
-        int headCount = 0;
-        if (row == 0) {
-            // Upper left:
-            if (col == 0) {
-
-                for (int i = row; i < 2; i++) {
-                    for (int j = col; j < 2; j++) {
-                        if (matrix.get(i).get(j).equals(CellType.HEAD)) {
-                            headCount++;
-                        }
-                    }
-                }
-
-            }
-
-            // Upper right:
-            else if (col == lastColIndex) {
-
-                for(int i = row; i < 2; i++) {
-                    for (int j = col; j > lastColIndex - 2; j--) {
-                        if (matrix.get(i).get(j).equals(CellType.HEAD)) {
-                            headCount++;
-                        }
-                    }
-                }
-
-            }
-
-            // Upper row middle:
-            else {
-
-                for (int i = row; i < 2; i++) {
-                    for (int j = col - 1; j < 2; j++) {
-
-                    }
-                }
-            }
-
-        }
-
-        if (headCount == 1 || headCount == 2) {
-            return CellType.HEAD;
-        } else {
-            return CellType.CONDUCTOR;
-        }
-        */
     }
 
     public GameFieldMatrix getGameFieldMatrix() {
