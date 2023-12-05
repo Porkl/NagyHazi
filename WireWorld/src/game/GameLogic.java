@@ -15,6 +15,28 @@ public class GameLogic {
 
     }
 
+    private CellType nextCellType(CellType prewiousCellType) {
+
+        if (prewiousCellType == CellType.EMPTY) {
+            return CellType.CONDUCTOR;
+        } else if (prewiousCellType == CellType.CONDUCTOR) {
+            return CellType.HEAD;
+        } else if (prewiousCellType == CellType.HEAD) {
+            return CellType.TAIL;
+        } else {
+            return CellType.EMPTY;
+        }
+
+    }
+
+    public void clickStep(int row, int col) {
+
+        // Stazsa a gamaefiledmatrix-on, de a button matrixon nem
+        CellType prewiousCellType = gameFieldMatrix.getMatrix().get(row + 1).get(col + 1);
+        gameFieldMatrix.getMatrix().get(row + 1).set(col + 1, nextCellType(prewiousCellType));
+
+    }
+
     public void step() {
 
         ArrayList<ArrayList<CellType>> newMatrix = new ArrayList<>();
@@ -26,8 +48,8 @@ public class GameLogic {
 
         CellType cell;
 
-        for (int row = 0; row < gameFieldMatrix.getMatrix().size(); row++) {
-            for (int col = 0; col < gameFieldMatrix.getMatrix().get(row).size(); col++) {
+        for (int row = 1; row < gameFieldMatrix.getMatrix().size() - 1; row++) {
+            for (int col = 1; col < gameFieldMatrix.getMatrix().get(row).size() - 1; col++) {
                 cell = gameFieldMatrix.getMatrix().get(row).get(col);
                 if (cell.equals(CellType.EMPTY)) {
                     newMatrix.get(row).set(col, CellType.EMPTY);
@@ -45,6 +67,24 @@ public class GameLogic {
     }
 
     private CellType fromConductorToHeadOrConductor(ArrayList<ArrayList<CellType>> matrix, int row, int col) {
+
+        int headCount = 0;
+
+        for (int i = row - 1; i <= row + 1; row++) {
+            for (int j = col - 1; j < col + 1; col++) {
+                if (matrix.get(i).get(j).equals(CellType.HEAD)) {
+                    headCount++;
+                }
+            }
+        }
+
+        if (headCount == 1 || headCount == 2) {
+            return CellType.HEAD;
+        } else {
+            return CellType.CONDUCTOR;
+        }
+        
+        /*
         int lastRowIndex = matrix.size();
         int lastColIndex = matrix.get(0).size();
 
@@ -64,7 +104,7 @@ public class GameLogic {
             }
 
             // Upper right:
-            if (col == lastColIndex) {
+            else if (col == lastColIndex) {
 
                 for(int i = row; i < 2; i++) {
                     for (int j = col; j > lastColIndex - 2; j--) {
@@ -76,6 +116,16 @@ public class GameLogic {
 
             }
 
+            // Upper row middle:
+            else {
+
+                for (int i = row; i < 2; i++) {
+                    for (int j = col - 1; j < 2; j++) {
+
+                    }
+                }
+            }
+
         }
 
         if (headCount == 1 || headCount == 2) {
@@ -83,12 +133,7 @@ public class GameLogic {
         } else {
             return CellType.CONDUCTOR;
         }
-    }
-
-
-
-    public void updateMatrixTitle(int row, int col) {
-        
+        */
     }
 
     public boolean isCurrentlyPlaying() {
