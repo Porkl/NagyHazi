@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import game.Options;
+
 public class SettingsMenu {
 
     private Window window;
@@ -56,8 +58,9 @@ public class SettingsMenu {
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "Save":
-                    window.getMatrix().getOptions().setRowCount(Integer.parseInt(rowField.getText()));
-                    window.getMatrix().getOptions().setColumnCount(Integer.parseInt(columnField.getText()));
+                    Options newOptions = new Options((Integer.parseInt(rowField.getText())), (Integer.parseInt(columnField.getText())));
+                    window.getLogic().getGameFieldMatrix().setOptions(newOptions);
+                    window.getLogic().getGameFieldMatrix().reBuildMatrix(newOptions);
                     break;
 
                 case "Back to Main Menu":

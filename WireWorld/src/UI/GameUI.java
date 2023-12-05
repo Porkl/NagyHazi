@@ -29,8 +29,8 @@ public class GameUI {
     public GameUI(Window window) {
         this.window = window;
 
-        rowCount = window.getMatrix().getOptions().getRowCount();
-        columnCount = window.getMatrix().getOptions().getColumnCount();
+        rowCount = window.getLogic().getGameFieldMatrix().getOptions().getRowCount();
+        columnCount = window.getLogic().getGameFieldMatrix().getOptions().getColumnCount();
 
         gameUIPanel = new JPanel(new BorderLayout());
         buttonGrid = new JButton[rowCount][columnCount];
@@ -89,12 +89,24 @@ public class GameUI {
             for (int col = 0; col < columnCount; col++) {
                 buttonGrid[row][col] = new JButton();
                 buttonGrid[row][col].addActionListener(gameButtonListener);
-                buttonGrid[row][col].setBackground(Color.BLACK);
+                buttonGrid[row][col].setBackground(colorFromCellType(window.getLogic().getGameFieldMatrix().getMatrix().get(row + 1).get(col + 1)));
                 gamePanel.add(buttonGrid[row][col]);
             }
         }
 
         gameUIPanel.add(gamePanel, BorderLayout.CENTER);
+    }
+
+    private Color colorFromCellType(CellType c) {
+        if (c == CellType.EMPTY) {
+            return Color.BLACK;
+        } else if (c == CellType.CONDUCTOR) {
+            return Color.YELLOW;
+        } else if (c == CellType.HEAD) {
+            return Color.BLUE;
+        } else {
+            return Color.RED;
+        }
     }
 
     private class MenuButtonListener implements ActionListener{
@@ -103,7 +115,8 @@ public class GameUI {
         public void actionPerformed(ActionEvent e) {
             switch (e.getActionCommand()) {
                 case "Reset Table":
-                    window.getGameUI().reDrawBoard(window.getMatrix());
+                    window.getLogic().resetTable();
+                    window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
                     window.revalidate();
                     break;
 
@@ -119,7 +132,9 @@ public class GameUI {
                     break;
 
                 default: //PLAY BUTTON!!!
-                    //TODO
+                    window.getLogic().step();
+                    window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
+                    window.revalidate();
                     System.out.println("Hello");
                     break;
             }        
@@ -138,12 +153,12 @@ public class GameUI {
                 for (int col = 0; col < columnCount; col++) {
                     if (buttonGrid[row][col] == e.getSource()) {
                         System.out.println(row + " " + col);
-                        // matrix.getMatrix().get(row).set(col, b1);
+                        window.getLogic().clickStep(row, col);
                     }
                 }
             }
 
-            for (ArrayList<CellType> arrayList : window.getMatrix().getMatrix()) {
+            for (ArrayList<CellType> arrayList : window.getLogic().getGameFieldMatrix().getMatrix()) {
                 for (CellType cellType : arrayList) {
                     System.out.printf(cellType.toString() + " ");
                 }

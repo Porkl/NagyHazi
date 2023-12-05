@@ -2,16 +2,17 @@ package UI;
 
 import javax.swing.JFrame;
 
-import game.GameFieldMatrix;
+import game.GameLogic;
 
 public class Window extends JFrame{
-    private GameFieldMatrix matrix;
+    private GameLogic logic;
+
     private MainMenu mainMenu;
     private SettingsMenu settingsMenu;
     private GameUI gameUI;
 
-    public Window(GameFieldMatrix matrix) {
-        this.matrix = matrix;
+    public Window(GameLogic logic) {
+        this.logic = logic;
 
         mainMenu = new MainMenu(this);
         settingsMenu = new SettingsMenu(this);
@@ -23,13 +24,13 @@ public class Window extends JFrame{
 
         add(mainMenu.getMainPanel());
     }
-
-    public GameFieldMatrix getMatrix() {
-        return matrix;
+    
+    public GameLogic getLogic() {
+        return logic;
     }
 
-    public void setMatrix(GameFieldMatrix matrix) {
-        this.matrix = matrix;
+    public void setLogic(GameLogic logic) {
+        this.logic = logic;
     }
     
     public MainMenu getMainMenu() {

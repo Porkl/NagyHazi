@@ -29,6 +29,13 @@ public class GameLogic {
 
     }
 
+    public void resetTable() {
+
+        GameFieldMatrix newFieldMatrix = new GameFieldMatrix(gameFieldMatrix.getOptions());
+        gameFieldMatrix = newFieldMatrix;
+
+    }
+
     public void clickStep(int row, int col) {
 
         // Stazsa a gamaefiledmatrix-on, de a button matrixon nem
@@ -39,12 +46,8 @@ public class GameLogic {
 
     public void step() {
 
-        ArrayList<ArrayList<CellType>> newMatrix = new ArrayList<>();
-        for (int row = 0; row < gameFieldMatrix.getMatrix().size(); row++) {
-            ArrayList<CellType> r = new ArrayList<>();
-            newMatrix.add(r);
-        }
-
+        GameFieldMatrix newFieldMatrix = new GameFieldMatrix(gameFieldMatrix.getOptions());
+        ArrayList<ArrayList<CellType>> newMatrix = newFieldMatrix.getMatrix();
 
         CellType cell;
 
@@ -70,8 +73,8 @@ public class GameLogic {
 
         int headCount = 0;
 
-        for (int i = row - 1; i <= row + 1; row++) {
-            for (int j = col - 1; j < col + 1; col++) {
+        for (int i = row - 1; i <= row + 1; i++) {
+            for (int j = col - 1; j <= col + 1; j++) {
                 if (matrix.get(i).get(j).equals(CellType.HEAD)) {
                     headCount++;
                 }
@@ -134,6 +137,14 @@ public class GameLogic {
             return CellType.CONDUCTOR;
         }
         */
+    }
+
+    public GameFieldMatrix getGameFieldMatrix() {
+        return gameFieldMatrix;
+    }
+
+    public void setGameFieldMatrix(GameFieldMatrix gameFieldMatrix) {
+        this.gameFieldMatrix = gameFieldMatrix;
     }
 
     public boolean isCurrentlyPlaying() {

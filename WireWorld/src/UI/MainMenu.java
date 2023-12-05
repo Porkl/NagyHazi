@@ -45,7 +45,7 @@ public class MainMenu {
                 case "New WireWorld Map":
                     mainPanel.setVisible(false);
                     window.remove(mainPanel);
-                    window.getGameUI().reDrawBoard(window.getMatrix());
+                    window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
                     window.add(window.getGameUI().getGameUIPanel());
                     window.getGameUI().getGameUIPanel().setVisible(true);
                     break;

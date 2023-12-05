@@ -11,10 +11,10 @@ public class GameFieldMatrix {
 
         this.options = options;
 
-        structMatrix(this.options);
+        reBuildMatrix(this.options);
     }
 
-    public void structMatrix(Options options) {
+    public void reBuildMatrix(Options options) {
         this.matrix = new ArrayList<>();
 
         // Stazsa a konnyebb kezelhetoseg miatt (+2)
