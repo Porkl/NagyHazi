@@ -2,6 +2,7 @@ package UI;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import javax.swing.plaf.basic.BasicArrowButton;
 
 import game.CellType;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class GameUI {
     
     private Window window;
+    private boolean currentlyPlaying;
 
     private JPanel gameUIPanel;
 
@@ -128,14 +130,29 @@ public class GameUI {
                     break;
                 
                 case "||":
-                    //TODO
+                    currentlyPlaying = false;
                     break;
 
                 default: //PLAY BUTTON!!!
-                    window.getLogic().step();
-                    window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
-                    window.revalidate();
-                    System.out.println("Hello");
+                    currentlyPlaying = true;
+                    Thread t = new Thread() {
+                        public void run() {
+                            while(currentlyPlaying) {
+                                window.getLogic().step();
+                                SwingUtilities.invokeLater(new Runnable() {
+                                    public void run() {
+                                        window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
+                                        window.revalidate();
+                                    }
+                                });
+
+                                try {
+                                    Thread.sleep(400);
+                                } catch(InterruptedException ie){}
+                            }
+                        }
+                    };
+                    t.start();
                     break;
             }        
         }
