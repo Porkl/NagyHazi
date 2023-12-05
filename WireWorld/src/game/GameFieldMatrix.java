@@ -1,8 +1,9 @@
 package game;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class GameFieldMatrix {
+public class GameFieldMatrix implements Serializable{
 
     private Options options;
     private ArrayList<ArrayList<CellType>> matrix;

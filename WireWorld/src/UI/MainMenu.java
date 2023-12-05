@@ -3,10 +3,20 @@ package UI;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import game.CellType;
+import game.GameFieldMatrix;
+import game.Options;
 
 public class MainMenu {
 
@@ -51,7 +61,12 @@ public class MainMenu {
                     break;
 
                 case "Load Previous Map":
-                    // startPreviousGame();
+                    loadPreviousGame();
+                    mainPanel.setVisible(false);
+                    window.remove(mainPanel);
+                    window.getGameUI().reDrawBoard(window.getLogic().getGameFieldMatrix());
+                    window.add(window.getGameUI().getGameUIPanel());
+                    window.getGameUI().getGameUIPanel().setVisible(true);
                     break;
 
                 case "Settings":
@@ -62,15 +77,42 @@ public class MainMenu {
                     break;
 
                 case "Exit the Game":
+                    save();
                     System.exit(0);
                     break;
 
                 default:
                     break;
             }
-        } 
+        }
     }
 
+    private void save() {
+        try {
+            FileOutputStream f = new FileOutputStream("SavedMatrix.txt");
+            ObjectOutputStream out = new ObjectOutputStream(f);
+            out.writeObject(window.getLogic().getGameFieldMatrix().getOptions());
+            out.writeObject(window.getLogic().getGameFieldMatrix().getMatrix());
+            out.close();
+        } catch (IOException ex) {
+            System.err.println("IOEception2");
+        }
+    } 
+
+    private void loadPreviousGame() {
+        try {
+            FileInputStream f = new FileInputStream("SavedMatrix.txt");
+            ObjectInputStream in = new ObjectInputStream(f);
+            window.getLogic().getGameFieldMatrix().setOptions((Options)in.readObject());
+            window.getLogic().getGameFieldMatrix().setMatrix((ArrayList<ArrayList<CellType>>)in.readObject());
+            in.close();
+        } catch (IOException ex) {
+            System.err.println("IOEception1");
+        } catch (ClassNotFoundException ex) {
+            System.err.println("ClassNotFoundException");
+        }    
+    }
+    
     public JPanel getMainPanel() {
         return mainPanel;
     }

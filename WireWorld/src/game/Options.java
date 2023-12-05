@@ -1,6 +1,8 @@
 package game;
 
-public class Options {
+import java.io.Serializable;
+
+public class Options implements Serializable{
     
     private int rowCount;
     private int columnCount;
