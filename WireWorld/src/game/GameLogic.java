@@ -8,6 +8,11 @@ public class GameLogic {
     private boolean currentlyPlaying;
     
 
+    /**
+     * A GameLogic konstruktora
+     * 
+     * @param matrix : A mátrixot és az opciókat tartalmazó elem
+     */
     public GameLogic(GameFieldMatrix matrix) {
 
         this.gameFieldMatrix = matrix;
@@ -15,6 +20,13 @@ public class GameLogic {
 
     }
 
+    /**
+     * Függvény, amely megmondja hogy kattintás során milyen tipusú cellából milyen típusú cella lesz.
+     * Üres -> Vezető -> Elektron Fej -> Elektron Farok -> Üres -> ...
+     * 
+     * @param prewiousCellType : A cella típusa, amit módosítani szeretnénk
+     * @return : A cella típusa, amit a módosítás után kapunk
+     */
     private CellType nextCellType(CellType prewiousCellType) {
 
         if (prewiousCellType == CellType.EMPTY) {
@@ -29,6 +41,9 @@ public class GameLogic {
 
     }
 
+    /**
+     *  A tábla alaphelyzetbe állítása, azaz csak üres mezők szerepelnek rajta
+     */
     public void resetTable() {
 
         GameFieldMatrix newFieldMatrix = new GameFieldMatrix(gameFieldMatrix.getOptions());
@@ -36,6 +51,13 @@ public class GameLogic {
 
     }
 
+    /**
+     * A függvény segítségével kattintás hatására megváltozik 
+     * a paraméterben megadott cella a "nextCellType" függvény segítségével.
+     * 
+     * @param row : A vátoztatandó sor száma
+     * @param col : A vátoztatandó oszlop száma
+     */
     public void clickStep(int row, int col) {
 
         // Stazsa a gamaefiledmatrix-on, de a button matrixon nem
@@ -44,6 +66,9 @@ public class GameLogic {
 
     }
 
+    /**
+     *  A függvény gondskodik az elindítást követően hogy az egész tábla változzon a szabályoknak megfelelően.
+     */
     public void step() {
 
         GameFieldMatrix newFieldMatrix = new GameFieldMatrix(gameFieldMatrix.getOptions());
@@ -69,6 +94,14 @@ public class GameLogic {
         gameFieldMatrix.setMatrix(newMatrix);
     }
 
+    /**
+     * A step() függvény segédfüggvénye, megmondja hogy egy CONDUCTOR cellából milyen cella lesz a következő
+     * 
+     * @param matrix : A mátrix, amin a műveletet el szeretnénk végezni
+     * @param row : A vátoztatandó sor száma
+     * @param col : A vátoztatandó oszlop száma
+     * @return
+     */
     private CellType fromConductorToHeadOrConductor(ArrayList<ArrayList<CellType>> matrix, int row, int col) {
 
         int headCount = 0;
@@ -89,18 +122,38 @@ public class GameLogic {
 
     }
 
+    /**
+     * Az GameFieldMatrix getter függvénye
+     * 
+     * @return A GameFieldMatrix értéke
+     */
     public GameFieldMatrix getGameFieldMatrix() {
         return gameFieldMatrix;
     }
 
+    /**
+     * Az GameFieldMatrix setter függvénye
+     * 
+     * @param gameFieldMatrix A GameFieldMatrix értéke
+     */
     public void setGameFieldMatrix(GameFieldMatrix gameFieldMatrix) {
         this.gameFieldMatrix = gameFieldMatrix;
     }
-
+    
+    /**
+     * Visszaadja, hogy a jelenlegi játék folyik-e
+     * 
+     * @return A jelenlegi játék folyik-e
+     */
     public boolean isCurrentlyPlaying() {
         return currentlyPlaying;
     }
 
+    /**
+     * Beállítható, hogy a jelenlegi játék follyon-e
+     * 
+     * @param currentlyPlaying A currentlyPlaying értéke
+     */
     public void setCurrentlyPlaying(boolean currentlyPlaying) {
         this.currentlyPlaying = currentlyPlaying;
     }
