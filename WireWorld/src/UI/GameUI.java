@@ -27,6 +27,13 @@ public class GameUI {
     private int rowCount;
     private int columnCount;
 
+    /**
+     * A GameUI-ért felelős konstruktor
+     * Létrehozza a Panelt, rajta a gombokat, ActionListener-el párosítja őket,
+     * és felelős az ablakon lévő összes tárgy létrehozásában.
+     * 
+     * @param window : A GameUI-t megjelenítő ablak
+     */
     public GameUI(Window window) {
         this.window = window;
 
@@ -75,6 +82,11 @@ public class GameUI {
         gameUIPanel.add(gamePanel, BorderLayout.CENTER);
     }
 
+    /**
+     * A játéktér újrarajzolásáért felelős függvény
+     * 
+     * @param matrix : A mátrix, ami alapján az ablakot újra kell majd rajzolni
+     */
     public void reDrawBoard(GameFieldMatrix matrix) {
         rowCount = matrix.getOptions().getRowCount();
         columnCount = matrix.getOptions().getColumnCount();
@@ -98,6 +110,13 @@ public class GameUI {
         gameUIPanel.add(gamePanel, BorderLayout.CENTER);
     }
 
+    /**
+     * Segédfüggvény, az eltárolt mátrixban lévő CellType-okból megmondja,
+     * hogy az milyen színnek felel meg a megjelenítéskor
+     * 
+     * @param c : A cella típusa, amit át kell alakítani
+     * @return : A szín, amivé átalakította a cella típusát
+     */
     private Color colorFromCellType(CellType c) {
         if (c == CellType.EMPTY) {
             return Color.BLACK;
@@ -175,6 +194,12 @@ public class GameUI {
         }
     }
 
+    /**
+     * Segédfüggvény, megmondja hogy kattintás hatására az adott színű gombnak milyen színűnek kell majd lennie.
+     * 
+     * @param prewiousColor : A kiindulási szín
+     * @return : A kiindulási színből kapott szín
+     */
     private Color nextColor(Color prewiousColor) {
         if (prewiousColor == Color.BLACK) {
             return Color.YELLOW;
@@ -187,6 +212,11 @@ public class GameUI {
         }
     }
 
+    /**
+     * A GameUIPanel-nek a getter függvénye
+     * 
+     * @return : A GameUIPanel-t
+     */
     public JPanel getGameUIPanel() {
         return gameUIPanel;
     }

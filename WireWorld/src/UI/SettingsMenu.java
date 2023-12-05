@@ -19,12 +19,22 @@ public class SettingsMenu {
     private JTextField rowField;
     private JTextField columnField;
     
+    /**
+     * A SettingsMenu konstruktora. Létrehozza a Panelt, rajta a gombokat, ActionListener-el párosítja őket,
+     * és felelős az ablakon lévő összes tárgy létrehozásában. (A setupMenuComponents() segítségével)
+     * 
+     * @param window : A főmenüt megjelenítő ablak
+     */
     public SettingsMenu(Window window) {
         this.window = window;
 
         setupMenuComponents();
     }
 
+    /**
+     * Segédfüggvény, létrehozza a Panelt, rajta a gombokat, ActionListener-el párosítja őket,
+     * és felelős az ablakon lévő összes tárgy létrehozásában. 
+     */
     private void setupMenuComponents() {
         settingsPanel = new JPanel(new GridLayout(4, 2));
         rowField = new JTextField();
@@ -76,6 +86,11 @@ public class SettingsMenu {
         }
     }
 
+    /**
+     * A SettingsPanel getter függvénye
+     * 
+     * @return : A SettingsPanel-t
+     */
     public JPanel getSettingsPanel() {
         return settingsPanel;
     }

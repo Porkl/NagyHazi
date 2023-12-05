@@ -22,6 +22,12 @@ public class MainMenu {
     private Window window;
     private JPanel mainPanel;
 
+    /**
+     * A főmenünek a konstruktora. Létrehozza a Panelt, rajta a gombokat, ActionListener-el párosítja őket,
+     * és felelős az ablakon lévő összes tárgy létrehozásában.
+     * 
+     * @param window : A főmenüt megjelenítő ablak
+     */
     public MainMenu(Window window) {
         this.window = window;
         mainPanel = new JPanel(new GridLayout(5,1));
@@ -86,6 +92,11 @@ public class MainMenu {
         }
     }
 
+    /**
+     * Segédfüggvény, a szerializálást végzi, az Options értékeit, illetve a meglévő mátrixot menti el.
+     * 
+     * @param fileName : A mentés során létrehozandó fájl neve
+     */
     public void save(String fileName) {
         try {
             FileOutputStream f = new FileOutputStream(fileName);
@@ -98,6 +109,11 @@ public class MainMenu {
         }
     } 
 
+    /**
+     * Segédfüggvény, a visszaolvasást végzi, majd betölti a beolvasott adatokat, és visszaállítja az előző állást
+     * 
+     * @param fileName : A beolvasandó fájl neve
+     */
     public void loadPreviousGame(String fileName) {
         try {
             FileInputStream f = new FileInputStream(fileName);
@@ -112,6 +128,11 @@ public class MainMenu {
         }    
     }
     
+    /**
+     * A MainPanel getter függvénye
+     * 
+     * @return : A MainPanel-t
+     */
     public JPanel getMainPanel() {
         return mainPanel;
     }
