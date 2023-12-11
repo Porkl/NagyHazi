@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gaphor xmlns="http://gaphor.sourceforge.net/model" version="3.0" gaphor-version="2.21.0">
+<StyleSheet id="58d6989a-66f8-11ec-b4c8-0456e5e540ed"/>
+<Package id="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed">
+<name>
+<val>New model</val>
+</name>
+<ownedDiagram>
+<reflist>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</reflist>
+</ownedDiagram>
+<ownedType>
+<reflist>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+<ref refid="39369dd6-93d0-11ee-8bd0-f02f742e8921"/>
+<ref refid="8a25d0f4-93d0-11ee-8ef9-f02f742e8921"/>
+<ref refid="9569bf81-93d0-11ee-a429-f02f742e8921"/>
+<ref refid="f5f793e7-93d0-11ee-9e65-f02f742e8921"/>
+<ref refid="1169ba7a-97f5-11ee-bcba-f02f742e8921"/>
+<ref refid="5b470cd1-97f5-11ee-ba40-f02f742e8921"/>
+</reflist>
+</ownedType>
+</Package>
+<Diagram id="58d6c536-66f8-11ec-b4c8-0456e5e540ed">
+<element>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</element>
+<name>
+<val>New diagram</val>
+</name>
+<ownedPresentation>
+<reflist>
+<ref refid="869f2a13-93c6-11ee-8422-f02f742e8921"/>
+<ref refid="0f62a7bb-93d0-11ee-b843-f02f742e8921"/>
+<ref refid="1eb90d1b-93d0-11ee-bc76-f02f742e8921"/>
+<ref refid="26bbbed2-93d0-11ee-871f-f02f742e8921"/>
+<ref refid="f5f7bb0b-93d0-11ee-b465-f02f742e8921"/>
+<ref refid="1169e19b-97f5-11ee-b056-f02f742e8921"/>
+<ref refid="5b4733e4-97f5-11ee-a88c-f02f742e8921"/>
+<ref refid="387be9bc-93d0-11ee-90d5-f02f742e8921"/>
+<ref refid="890b2495-93d0-11ee-b01b-f02f742e8921"/>
+<ref refid="9490e64c-93d0-11ee-87ee-f02f742e8921"/>
+<ref refid="06dacb24-93d1-11ee-94a3-f02f742e8921"/>
+</reflist>
+</ownedPresentation>
+</Diagram>
+<Class id="869f0315-93c6-11ee-83aa-f02f742e8921">
+<generalization>
+<reflist>
+<ref refid="0c67ab33-93d1-11ee-97d7-f02f742e8921"/>
+</reflist>
+</generalization>
+<name>
+<val>Window</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="9f5605cc-93c6-11ee-b2bc-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="9aa091e8-93d1-11ee-9d10-f02f742e8921"/>
+<ref refid="cc270378-93d1-11ee-abfa-f02f742e8921"/>
+<ref refid="d875a872-93d1-11ee-bfd5-f02f742e8921"/>
+<ref refid="f5e3d0ca-93d1-11ee-87d0-f02f742e8921"/>
+<ref refid="0a1a6241-93d2-11ee-a6ba-f02f742e8921"/>
+<ref refid="1ade606b-93d2-11ee-be81-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="869f2a13-93c6-11ee-8422-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="869f2a13-93c6-11ee-8422-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 24.000000000000014, 73.63293422989234)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>162.0</val>
+</width>
+<height>
+<val>200.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Property id="9f5605cc-93c6-11ee-b2bc-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>logic</val>
+</name>
+<typeValue>
+<val>GameLogic</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Class id="0f62809d-93d0-11ee-9454-f02f742e8921">
+<name>
+<val>MainMenu</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="8a8883aa-97f4-11ee-8cda-f02f742e8921"/>
+<ref refid="9a087e37-97f4-11ee-9ba7-f02f742e8921"/>
+<ref refid="3936c4ec-93d0-11ee-af0a-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="b9f6cb54-97f4-11ee-ab28-f02f742e8921"/>
+<ref refid="77b3633e-97f5-11ee-8242-f02f742e8921"/>
+<ref refid="89d3d2d1-97f5-11ee-ae71-f02f742e8921"/>
+<ref refid="a9e9f04b-97f5-11ee-ac40-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="0f62a7bb-93d0-11ee-b843-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="0f62a7bb-93d0-11ee-b843-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, -220.9740951269821, 356.1845840941558)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>180.0</val>
+</width>
+<height>
+<val>180.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Class id="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921">
+<name>
+<val>SettingsMenu</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="c3d0d988-97f5-11ee-84cf-f02f742e8921"/>
+<ref refid="cfab741c-97f5-11ee-8965-f02f742e8921"/>
+<ref refid="e5aa9488-97f5-11ee-b18b-f02f742e8921"/>
+<ref refid="f799a0d1-97f5-11ee-b1b9-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="0ee2514c-97f6-11ee-9179-f02f742e8921"/>
+<ref refid="1ce25297-97f6-11ee-b096-f02f742e8921"/>
+<ref refid="2a6ab989-97f6-11ee-b923-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="1eb90d1b-93d0-11ee-bc76-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="1eb90d1b-93d0-11ee-bc76-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 17.500000000000078, 386.1845840941558)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>175.0</val>
+</width>
+<height>
+<val>200.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Class id="26bb97cf-93d0-11ee-900f-f02f742e8921">
+<name>
+<val>GameUI</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="551461ed-97f6-11ee-9fb8-f02f742e8921"/>
+<ref refid="596289f4-97f6-11ee-b6e7-f02f742e8921"/>
+<ref refid="6f2ac6c8-97f6-11ee-98e0-f02f742e8921"/>
+<ref refid="7ceef28f-97f6-11ee-92a0-f02f742e8921"/>
+<ref refid="930b61ee-97f6-11ee-9536-f02f742e8921"/>
+<ref refid="a2660995-97f6-11ee-9860-f02f742e8921"/>
+<ref refid="acd3c45c-97f6-11ee-99e8-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="b94e4e71-97f6-11ee-a360-f02f742e8921"/>
+<ref refid="d0441d11-97f6-11ee-9e01-f02f742e8921"/>
+<ref refid="e9af9c96-97f6-11ee-b43b-f02f742e8921"/>
+<ref refid="0f8d2bc0-97f7-11ee-bb9a-f02f742e8921"/>
+<ref refid="19a69f18-97f7-11ee-be9a-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="26bbbed2-93d0-11ee-871f-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="26bbbed2-93d0-11ee-871f-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 292.0, 336.1845840941558)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>213.0</val>
+</width>
+<height>
+<val>300.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</subject>
+</ClassItem>
+<AssociationItem id="387be9bc-93d0-11ee-90d5-f02f742e8921">
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<head_subject>
+<ref refid="3936c4ec-93d0-11ee-af0a-f02f742e8921"/>
+</head_subject>
+<horizontal>
+<val>0</val>
+</horizontal>
+<orthogonal>
+<val>0</val>
+</orthogonal>
+<subject>
+<ref refid="39369dd6-93d0-11ee-8bd0-f02f742e8921"/>
+</subject>
+<tail_subject>
+<ref refid="3936ebff-93d0-11ee-ae17-f02f742e8921"/>
+</tail_subject>
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 84.001964253144, 228.63524789992596)</val>
+</matrix>
+<points>
+<val>[(-29.00196425314394, 44.99768632996637), (-176.37291055602256, 127.54933619422985)]</val>
+</points>
+<head-connection>
+<ref refid="869f2a13-93c6-11ee-8422-f02f742e8921"/>
+</head-connection>
+<tail-connection>
+<ref refid="0f62a7bb-93d0-11ee-b843-f02f742e8921"/>
+</tail-connection>
+</AssociationItem>
+<Association id="39369dd6-93d0-11ee-8bd0-f02f742e8921">
+<memberEnd>
+<reflist>
+<ref refid="3936c4ec-93d0-11ee-af0a-f02f742e8921"/>
+<ref refid="3936ebff-93d0-11ee-ae17-f02f742e8921"/>
+</reflist>
+</memberEnd>
+<ownedEnd>
+<reflist>
+<ref refid="3936ebff-93d0-11ee-ae17-f02f742e8921"/>
+</reflist>
+</ownedEnd>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="387be9bc-93d0-11ee-90d5-f02f742e8921"/>
+</reflist>
+</presentation>
+</Association>
+<Property id="3936c4ec-93d0-11ee-af0a-f02f742e8921">
+<association>
+<ref refid="39369dd6-93d0-11ee-8bd0-f02f742e8921"/>
+</association>
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<type>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</type>
+</Property>
+<Property id="3936ebff-93d0-11ee-ae17-f02f742e8921">
+<aggregation>
+<val>shared</val>
+</aggregation>
+<association>
+<ref refid="39369dd6-93d0-11ee-8bd0-f02f742e8921"/>
+</association>
+<owningAssociation>
+<ref refid="39369dd6-93d0-11ee-8bd0-f02f742e8921"/>
+</owningAssociation>
+<type>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</type>
+</Property>
+<AssociationItem id="890b2495-93d0-11ee-b01b-f02f742e8921">
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<head_subject>
+<ref refid="8a25f802-93d0-11ee-a8a2-f02f742e8921"/>
+</head_subject>
+<horizontal>
+<val>0</val>
+</horizontal>
+<orthogonal>
+<val>0</val>
+</orthogonal>
+<subject>
+<ref refid="8a25d0f4-93d0-11ee-8ef9-f02f742e8921"/>
+</subject>
+<tail_subject>
+<ref refid="8a261f16-93d0-11ee-9e90-f02f742e8921"/>
+</tail_subject>
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 98.97263435755198, 214.00197186613335)</val>
+</matrix>
+<points>
+<val>[(6.027365642448046, 59.63096236375898), (5.337262230530342, 172.18261222802246)]</val>
+</points>
+<head-connection>
+<ref refid="869f2a13-93c6-11ee-8422-f02f742e8921"/>
+</head-connection>
+<tail-connection>
+<ref refid="1eb90d1b-93d0-11ee-bc76-f02f742e8921"/>
+</tail-connection>
+</AssociationItem>
+<Association id="8a25d0f4-93d0-11ee-8ef9-f02f742e8921">
+<memberEnd>
+<reflist>
+<ref refid="8a25f802-93d0-11ee-a8a2-f02f742e8921"/>
+<ref refid="8a261f16-93d0-11ee-9e90-f02f742e8921"/>
+</reflist>
+</memberEnd>
+<ownedEnd>
+<reflist>
+<ref refid="8a25f802-93d0-11ee-a8a2-f02f742e8921"/>
+<ref refid="8a261f16-93d0-11ee-9e90-f02f742e8921"/>
+</reflist>
+</ownedEnd>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="890b2495-93d0-11ee-b01b-f02f742e8921"/>
+</reflist>
+</presentation>
+</Association>
+<Property id="8a25f802-93d0-11ee-a8a2-f02f742e8921">
+<association>
+<ref refid="8a25d0f4-93d0-11ee-8ef9-f02f742e8921"/>
+</association>
+<owningAssociation>
+<ref refid="8a25d0f4-93d0-11ee-8ef9-f02f742e8921"/>
+</owningAssociation>
+<type>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</type>
+</Property>
+<Property id="8a261f16-93d0-11ee-9e90-f02f742e8921">
+<aggregation>
+<val>shared</val>
+</aggregation>
+<association>
+<ref refid="8a25d0f4-93d0-11ee-8ef9-f02f742e8921"/>
+</association>
+<owningAssociation>
+<ref refid="8a25d0f4-93d0-11ee-8ef9-f02f742e8921"/>
+</owningAssociation>
+<type>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</type>
+</Property>
+<AssociationItem id="9490e64c-93d0-11ee-87ee-f02f742e8921">
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<head_subject>
+<ref refid="9569e68d-93d0-11ee-adbd-f02f742e8921"/>
+</head_subject>
+<horizontal>
+<val>0</val>
+</horizontal>
+<orthogonal>
+<val>0</val>
+</orthogonal>
+<subject>
+<ref refid="9569bf81-93d0-11ee-a429-f02f742e8921"/>
+</subject>
+<tail_subject>
+<ref refid="956a0d9e-93d0-11ee-8250-f02f742e8921"/>
+</tail_subject>
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 99.98799464710376, 209.94053070792626)</val>
+</matrix>
+<points>
+<val>[(55.01200535289627, 63.69240352196607), (250.26375491939737, 126.24405338622955)]</val>
+</points>
+<head-connection>
+<ref refid="869f2a13-93c6-11ee-8422-f02f742e8921"/>
+</head-connection>
+<tail-connection>
+<ref refid="26bbbed2-93d0-11ee-871f-f02f742e8921"/>
+</tail-connection>
+</AssociationItem>
+<Association id="9569bf81-93d0-11ee-a429-f02f742e8921">
+<memberEnd>
+<reflist>
+<ref refid="9569e68d-93d0-11ee-adbd-f02f742e8921"/>
+<ref refid="956a0d9e-93d0-11ee-8250-f02f742e8921"/>
+</reflist>
+</memberEnd>
+<ownedEnd>
+<reflist>
+<ref refid="9569e68d-93d0-11ee-adbd-f02f742e8921"/>
+<ref refid="956a0d9e-93d0-11ee-8250-f02f742e8921"/>
+</reflist>
+</ownedEnd>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="9490e64c-93d0-11ee-87ee-f02f742e8921"/>
+</reflist>
+</presentation>
+</Association>
+<Property id="9569e68d-93d0-11ee-adbd-f02f742e8921">
+<association>
+<ref refid="9569bf81-93d0-11ee-a429-f02f742e8921"/>
+</association>
+<owningAssociation>
+<ref refid="9569bf81-93d0-11ee-a429-f02f742e8921"/>
+</owningAssociation>
+<type>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</type>
+</Property>
+<Property id="956a0d9e-93d0-11ee-8250-f02f742e8921">
+<aggregation>
+<val>shared</val>
+</aggregation>
+<association>
+<ref refid="9569bf81-93d0-11ee-a429-f02f742e8921"/>
+</association>
+<owningAssociation>
+<ref refid="9569bf81-93d0-11ee-a429-f02f742e8921"/>
+</owningAssociation>
+<type>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</type>
+</Property>
+<Class id="f5f793e7-93d0-11ee-9e65-f02f742e8921">
+<name>
+<val>JFrame</val>
+</name>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="f5f7bb0b-93d0-11ee-b465-f02f742e8921"/>
+</reflist>
+</presentation>
+<specialization>
+<reflist>
+<ref refid="0c67ab33-93d1-11ee-97d7-f02f742e8921"/>
+</reflist>
+</specialization>
+</Class>
+<ClassItem id="f5f7bb0b-93d0-11ee-b465-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 54.605655193189854, -38.822740232257715)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>100.0</val>
+</width>
+<height>
+<val>60.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="f5f793e7-93d0-11ee-9e65-f02f742e8921"/>
+</subject>
+</ClassItem>
+<GeneralizationItem id="06dacb24-93d1-11ee-94a3-f02f742e8921">
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<horizontal>
+<val>0</val>
+</horizontal>
+<orthogonal>
+<val>0</val>
+</orthogonal>
+<subject>
+<ref refid="0c67ab33-93d1-11ee-97d7-f02f742e8921"/>
+</subject>
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 102.01871522620726, 212.9866115765816)</val>
+</matrix>
+<points>
+<val>[(2.586939966982598, -139.35367734668927), (2.9812847737927655, -191.80935180883932)]</val>
+</points>
+<head-connection>
+<ref refid="869f2a13-93c6-11ee-8422-f02f742e8921"/>
+</head-connection>
+<tail-connection>
+<ref refid="f5f7bb0b-93d0-11ee-b465-f02f742e8921"/>
+</tail-connection>
+</GeneralizationItem>
+<Generalization id="0c67ab33-93d1-11ee-97d7-f02f742e8921">
+<general>
+<ref refid="f5f793e7-93d0-11ee-9e65-f02f742e8921"/>
+</general>
+<presentation>
+<reflist>
+<ref refid="06dacb24-93d1-11ee-94a3-f02f742e8921"/>
+</reflist>
+</presentation>
+<specific>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</specific>
+</Generalization>
+<Operation id="9aa091e8-93d1-11ee-9d10-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>Window</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="9aa12e3c-93d1-11ee-a49a-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="9aa12e3c-93d1-11ee-a49a-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>GameLogic</val>
+</name>
+<ownerFormalParam>
+<ref refid="9aa091e8-93d1-11ee-9d10-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="cc270378-93d1-11ee-abfa-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>getLogic</val>
+</name>
+</Operation>
+<Operation id="d875a872-93d1-11ee-bfd5-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>setLogic</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="e7900ca1-93d1-11ee-8ece-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="e7900ca1-93d1-11ee-8ece-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>GameLogic</val>
+</name>
+<ownerFormalParam>
+<ref refid="d875a872-93d1-11ee-bfd5-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="f5e3d0ca-93d1-11ee-87d0-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>getMainMenu</val>
+</name>
+</Operation>
+<Operation id="0a1a6241-93d2-11ee-a6ba-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>getSettingsMenu</val>
+</name>
+</Operation>
+<Operation id="1ade606b-93d2-11ee-be81-f02f742e8921">
+<class_>
+<ref refid="869f0315-93c6-11ee-83aa-f02f742e8921"/>
+</class_>
+<name>
+<val>getGameUI</val>
+</name>
+</Operation>
+<Property id="8a8883aa-97f4-11ee-8cda-f02f742e8921">
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<name>
+<val>window</val>
+</name>
+<typeValue>
+<val>Window</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="9a087e37-97f4-11ee-9ba7-f02f742e8921">
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<name>
+<val>mainPanel</val>
+</name>
+<typeValue>
+<val>JPanel</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Operation id="b9f6cb54-97f4-11ee-ab28-f02f742e8921">
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<name>
+<val>MainMenu</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="b9f78eba-97f4-11ee-aae2-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="b9f78eba-97f4-11ee-aae2-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Window</val>
+</name>
+<ownerFormalParam>
+<ref refid="b9f6cb54-97f4-11ee-ab28-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Class id="1169ba7a-97f5-11ee-bcba-f02f742e8921">
+<name>
+<val>ButtonListener</val>
+</name>
+<ownedOperation>
+<reflist>
+<ref refid="50cd68f2-97f5-11ee-853e-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="1169e19b-97f5-11ee-b056-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="1169e19b-97f5-11ee-b056-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, -220.9740951269821, 204.4581598032886)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>203.0</val>
+</width>
+<height>
+<val>80.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="1169ba7a-97f5-11ee-bcba-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Operation id="50cd68f2-97f5-11ee-853e-f02f742e8921">
+<class_>
+<ref refid="1169ba7a-97f5-11ee-bcba-f02f742e8921"/>
+</class_>
+<name>
+<val>actionPerformed</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="50ce2c3e-97f5-11ee-b773-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="50ce2c3e-97f5-11ee-b773-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>ActionEvent</val>
+</name>
+<ownerFormalParam>
+<ref refid="50cd68f2-97f5-11ee-853e-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Class id="5b470cd1-97f5-11ee-ba40-f02f742e8921">
+<name>
+<val>ActionListener</val>
+</name>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="5b4733e4-97f5-11ee-a88c-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="5b4733e4-97f5-11ee-a88c-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, -174.5, 102.7290799016443)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>103.0</val>
+</width>
+<height>
+<val>60.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="5b470cd1-97f5-11ee-ba40-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Operation id="77b3633e-97f5-11ee-8242-f02f742e8921">
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<name>
+<val>save</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="77b3ff90-97f5-11ee-8891-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="77b3ff90-97f5-11ee-8891-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>String</val>
+</name>
+<ownerFormalParam>
+<ref refid="77b3633e-97f5-11ee-8242-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="89d3d2d1-97f5-11ee-ae71-f02f742e8921">
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<name>
+<val>loadPreviousGame</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="89d46f09-97f5-11ee-ae94-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="89d46f09-97f5-11ee-ae94-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>String</val>
+</name>
+<ownerFormalParam>
+<ref refid="89d3d2d1-97f5-11ee-ae71-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="a9e9f04b-97f5-11ee-ac40-f02f742e8921">
+<class_>
+<ref refid="0f62809d-93d0-11ee-9454-f02f742e8921"/>
+</class_>
+<name>
+<val>getMainPanel</val>
+</name>
+</Operation>
+<Property id="c3d0d988-97f5-11ee-84cf-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>window</val>
+</name>
+<typeValue>
+<val>Window</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="cfab741c-97f5-11ee-8965-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>settingsPanel</val>
+</name>
+<typeValue>
+<val>JPanel</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="e5aa9488-97f5-11ee-b18b-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>rowField</val>
+</name>
+<typeValue>
+<val>JTextField</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="f799a0d1-97f5-11ee-b1b9-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>columnField</val>
+</name>
+<typeValue>
+<val>JTextField</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Operation id="0ee2514c-97f6-11ee-9179-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>SettingsMenu</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="0ee31499-97f6-11ee-85f5-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="0ee31499-97f6-11ee-85f5-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Window</val>
+</name>
+<ownerFormalParam>
+<ref refid="0ee2514c-97f6-11ee-9179-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="1ce25297-97f6-11ee-b096-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>setupMenuComponents</val>
+</name>
+<visibility>
+<val>private</val>
+</visibility>
+</Operation>
+<Operation id="2a6ab989-97f6-11ee-b923-f02f742e8921">
+<class_>
+<ref refid="1eb8e5c3-93d0-11ee-9c6e-f02f742e8921"/>
+</class_>
+<name>
+<val>getSettingsPanel</val>
+</name>
+</Operation>
+<Property id="551461ed-97f6-11ee-9fb8-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>window</val>
+</name>
+<typeValue>
+<val>Window</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="596289f4-97f6-11ee-b6e7-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>currentlyPlaying</val>
+</name>
+<typeValue>
+<val>boolean</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="6f2ac6c8-97f6-11ee-98e0-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>gameUIPanel</val>
+</name>
+<typeValue>
+<val>JPanel</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="7ceef28f-97f6-11ee-92a0-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>gamePanel</val>
+</name>
+<typeValue>
+<val>JPanel</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="930b61ee-97f6-11ee-9536-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>- buttonGrid: JButton[][]</val>
+</name>
+</Property>
+<Property id="a2660995-97f6-11ee-9860-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>rowCount</val>
+</name>
+<typeValue>
+<val>int</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="acd3c45c-97f6-11ee-99e8-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>columnCount</val>
+</name>
+<typeValue>
+<val>int</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Operation id="b94e4e71-97f6-11ee-a360-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>GameUI</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="b94f121d-97f6-11ee-ab47-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="b94f121d-97f6-11ee-ab47-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Window</val>
+</name>
+<ownerFormalParam>
+<ref refid="b94e4e71-97f6-11ee-a360-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="d0441d11-97f6-11ee-9e01-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>reDrawBoard</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="d044e0e3-97f6-11ee-8c34-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="d044e0e3-97f6-11ee-8c34-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>GameFieldMatrix</val>
+</name>
+<ownerFormalParam>
+<ref refid="d0441d11-97f6-11ee-9e01-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="e9af9c96-97f6-11ee-b43b-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>colorFromCellType</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="e9b06048-97f6-11ee-b4d1-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+<visibility>
+<val>private</val>
+</visibility>
+</Operation>
+<Parameter id="e9b06048-97f6-11ee-b4d1-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>CellType</val>
+</name>
+<ownerFormalParam>
+<ref refid="e9af9c96-97f6-11ee-b43b-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="0f8d2bc0-97f7-11ee-bb9a-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>nextColor</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="0f8def0f-97f7-11ee-940b-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+<visibility>
+<val>private</val>
+</visibility>
+</Operation>
+<Parameter id="0f8def0f-97f7-11ee-940b-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Color</val>
+</name>
+<ownerFormalParam>
+<ref refid="0f8d2bc0-97f7-11ee-bb9a-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="19a69f18-97f7-11ee-be9a-f02f742e8921">
+<class_>
+<ref refid="26bb97cf-93d0-11ee-900f-f02f742e8921"/>
+</class_>
+<name>
+<val>getGameUIPanel</val>
+</name>
+</Operation>
+</gaphor>
