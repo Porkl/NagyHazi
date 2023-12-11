@@ -22,6 +22,10 @@
 <ref refid="f5f793e7-93d0-11ee-9e65-f02f742e8921"/>
 <ref refid="1169ba7a-97f5-11ee-bcba-f02f742e8921"/>
 <ref refid="5b470cd1-97f5-11ee-ba40-f02f742e8921"/>
+<ref refid="3fe41fcf-97f7-11ee-82d3-f02f742e8921"/>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
 </reflist>
 </ownedType>
 </Package>
@@ -41,6 +45,10 @@
 <ref refid="f5f7bb0b-93d0-11ee-b465-f02f742e8921"/>
 <ref refid="1169e19b-97f5-11ee-b056-f02f742e8921"/>
 <ref refid="5b4733e4-97f5-11ee-a88c-f02f742e8921"/>
+<ref refid="3fe446ee-97f7-11ee-adda-f02f742e8921"/>
+<ref refid="6b1f428e-97f7-11ee-baad-f02f742e8921"/>
+<ref refid="06e4f4d4-97f8-11ee-b60b-f02f742e8921"/>
+<ref refid="909b1472-97f8-11ee-9c87-f02f742e8921"/>
 <ref refid="387be9bc-93d0-11ee-90d5-f02f742e8921"/>
 <ref refid="890b2495-93d0-11ee-b01b-f02f742e8921"/>
 <ref refid="9490e64c-93d0-11ee-87ee-f02f742e8921"/>
@@ -1161,4 +1169,682 @@
 <val>getGameUIPanel</val>
 </name>
 </Operation>
+<Enumeration id="3fe41fcf-97f7-11ee-82d3-f02f742e8921">
+<name>
+<val>CellType</val>
+</name>
+<ownedLiteral>
+<reflist>
+<ref refid="53e933ed-97f7-11ee-b2bb-f02f742e8921"/>
+<ref refid="579ee6c2-97f7-11ee-a574-f02f742e8921"/>
+<ref refid="59d1a561-97f7-11ee-a891-f02f742e8921"/>
+<ref refid="5d3e1e29-97f7-11ee-95c0-f02f742e8921"/>
+</reflist>
+</ownedLiteral>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="3fe446ee-97f7-11ee-adda-f02f742e8921"/>
+</reflist>
+</presentation>
+</Enumeration>
+<EnumerationItem id="3fe446ee-97f7-11ee-adda-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, -207.38442726302804, 716.2862922780618)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>126.08942650094912</val>
+</width>
+<height>
+<val>156.57258455612356</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<show_attributes>
+<val>0</val>
+</show_attributes>
+<show_operations>
+<val>0</val>
+</show_operations>
+<subject>
+<ref refid="3fe41fcf-97f7-11ee-82d3-f02f742e8921"/>
+</subject>
+</EnumerationItem>
+<EnumerationLiteral id="53e933ed-97f7-11ee-b2bb-f02f742e8921">
+<enumeration>
+<ref refid="3fe41fcf-97f7-11ee-82d3-f02f742e8921"/>
+</enumeration>
+<name>
+<val>EMPTY</val>
+</name>
+</EnumerationLiteral>
+<EnumerationLiteral id="579ee6c2-97f7-11ee-a574-f02f742e8921">
+<enumeration>
+<ref refid="3fe41fcf-97f7-11ee-82d3-f02f742e8921"/>
+</enumeration>
+<name>
+<val>HEAD</val>
+</name>
+</EnumerationLiteral>
+<EnumerationLiteral id="59d1a561-97f7-11ee-a891-f02f742e8921">
+<enumeration>
+<ref refid="3fe41fcf-97f7-11ee-82d3-f02f742e8921"/>
+</enumeration>
+<name>
+<val>TAIL</val>
+</name>
+</EnumerationLiteral>
+<EnumerationLiteral id="5d3e1e29-97f7-11ee-95c0-f02f742e8921">
+<enumeration>
+<ref refid="3fe41fcf-97f7-11ee-82d3-f02f742e8921"/>
+</enumeration>
+<name>
+<val>CONDUCTOR</val>
+</name>
+</EnumerationLiteral>
+<Class id="6b1f1b8a-97f7-11ee-b85e-f02f742e8921">
+<name>
+<val>GameFieldMatrix</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="7efd1480-97f7-11ee-8af6-f02f742e8921"/>
+<ref refid="978ba717-97f7-11ee-b8ec-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="ad948469-97f7-11ee-a277-f02f742e8921"/>
+<ref refid="bb563c23-97f7-11ee-89b5-f02f742e8921"/>
+<ref refid="c517d4ec-97f7-11ee-99fe-f02f742e8921"/>
+<ref refid="cfab5818-97f7-11ee-a809-f02f742e8921"/>
+<ref refid="d8f8e31e-97f7-11ee-9a97-f02f742e8921"/>
+<ref refid="f047c08d-97f7-11ee-8f21-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="6b1f428e-97f7-11ee-baad-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="6b1f428e-97f7-11ee-baad-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, -18.436698951102247, 734.299067492483)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>262.0</val>
+</width>
+<height>
+<val>220.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Property id="7efd1480-97f7-11ee-8af6-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>options</val>
+</name>
+<typeValue>
+<val>Options</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="978ba717-97f7-11ee-b8ec-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>- matrix: ArrayList&lt;ArrayList&lt;CellType&gt;&gt;</val>
+</name>
+</Property>
+<Operation id="ad948469-97f7-11ee-a277-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>GameFieldMatrix</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="ad9547b0-97f7-11ee-a6b3-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="ad9547b0-97f7-11ee-a6b3-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Options</val>
+</name>
+<ownerFormalParam>
+<ref refid="ad948469-97f7-11ee-a277-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="bb563c23-97f7-11ee-89b5-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>reBuildMatrix</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="bb56ff6f-97f7-11ee-be47-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="bb56ff6f-97f7-11ee-be47-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Options</val>
+</name>
+<ownerFormalParam>
+<ref refid="bb563c23-97f7-11ee-89b5-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="c517d4ec-97f7-11ee-99fe-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>getOptions</val>
+</name>
+</Operation>
+<Operation id="cfab5818-97f7-11ee-a809-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>setOptions</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="cfac1bc3-97f7-11ee-9550-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="cfac1bc3-97f7-11ee-9550-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>Options</val>
+</name>
+<ownerFormalParam>
+<ref refid="cfab5818-97f7-11ee-a809-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="d8f8e31e-97f7-11ee-9a97-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>getMatrix</val>
+</name>
+</Operation>
+<Operation id="f047c08d-97f7-11ee-8f21-f02f742e8921">
+<class_>
+<ref refid="6b1f1b8a-97f7-11ee-b85e-f02f742e8921"/>
+</class_>
+<name>
+<val>setMatrix</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="f048843e-97f7-11ee-9215-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="f048843e-97f7-11ee-9215-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>ArrayList</val>
+</name>
+<ownerFormalParam>
+<ref refid="f047c08d-97f7-11ee-8f21-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Class id="06e4cddd-97f8-11ee-8906-f02f742e8921">
+<name>
+<val>GameLogic</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="1d2b6765-97f8-11ee-94f4-f02f742e8921"/>
+<ref refid="2d6a66b3-97f8-11ee-982e-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="3d3905f3-97f8-11ee-a7e8-f02f742e8921"/>
+<ref refid="4df5b25e-97f8-11ee-bfc0-f02f742e8921"/>
+<ref refid="560acca0-97f8-11ee-92bb-f02f742e8921"/>
+<ref refid="62e0f963-97f8-11ee-9662-f02f742e8921"/>
+<ref refid="688ffc2d-97f8-11ee-aa1c-f02f742e8921"/>
+<ref refid="835c6163-97f8-11ee-86c2-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="06e4f4d4-97f8-11ee-b60b-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="06e4f4d4-97f8-11ee-b60b-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, -167.20208255393436, 965.318562721376)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>347.0</val>
+</width>
+<height>
+<val>220.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Property id="1d2b6765-97f8-11ee-94f4-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>gameFieldMatrix</val>
+</name>
+<typeValue>
+<val>GameFieldMatrix</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="2d6a66b3-97f8-11ee-982e-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>currentlyPlaying</val>
+</name>
+<typeValue>
+<val>boolean</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Operation id="3d3905f3-97f8-11ee-a7e8-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>GameLogic</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="3d39f0b2-97f8-11ee-854c-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="3d39f0b2-97f8-11ee-854c-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>GameFieldMatrix</val>
+</name>
+<ownerFormalParam>
+<ref refid="3d3905f3-97f8-11ee-a7e8-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="4df5b25e-97f8-11ee-bfc0-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>nextCellType</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="4df69d7e-97f8-11ee-ad8a-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+<visibility>
+<val>private</val>
+</visibility>
+</Operation>
+<Parameter id="4df69d7e-97f8-11ee-ad8a-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>CellType</val>
+</name>
+<ownerFormalParam>
+<ref refid="4df5b25e-97f8-11ee-bfc0-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="560acca0-97f8-11ee-92bb-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>resetTable</val>
+</name>
+</Operation>
+<Operation id="62e0f963-97f8-11ee-9662-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>clickStep</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="62e1bd86-97f8-11ee-a741-f02f742e8921"/>
+<ref refid="62e280e9-97f8-11ee-8c4f-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="62e1bd86-97f8-11ee-a741-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="62e0f963-97f8-11ee-9662-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Parameter id="62e280e9-97f8-11ee-8c4f-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="62e0f963-97f8-11ee-9662-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="688ffc2d-97f8-11ee-aa1c-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>step</val>
+</name>
+</Operation>
+<Operation id="835c6163-97f8-11ee-86c2-f02f742e8921">
+<class_>
+<ref refid="06e4cddd-97f8-11ee-8906-f02f742e8921"/>
+</class_>
+<name>
+<val>fromConductorToHeadOrConductor</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="835d4bc8-97f8-11ee-8dc6-f02f742e8921"/>
+<ref refid="835e0f24-97f8-11ee-9a1f-f02f742e8921"/>
+<ref refid="835ed27f-97f8-11ee-b615-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+<visibility>
+<val>private</val>
+</visibility>
+</Operation>
+<Parameter id="835d4bc8-97f8-11ee-8dc6-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>ArrayList</val>
+</name>
+<ownerFormalParam>
+<ref refid="835c6163-97f8-11ee-86c2-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Parameter id="835e0f24-97f8-11ee-9a1f-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="835c6163-97f8-11ee-86c2-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Parameter id="835ed27f-97f8-11ee-b615-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="835c6163-97f8-11ee-86c2-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Class id="909aed54-97f8-11ee-9957-f02f742e8921">
+<name>
+<val>Options</val>
+</name>
+<ownedAttribute>
+<reflist>
+<ref refid="9f74bd47-97f8-11ee-af0c-f02f742e8921"/>
+<ref refid="a720d97d-97f8-11ee-8bde-f02f742e8921"/>
+</reflist>
+</ownedAttribute>
+<ownedOperation>
+<reflist>
+<ref refid="b0a90c6c-97f8-11ee-bd96-f02f742e8921"/>
+<ref refid="b9494ed3-97f8-11ee-ab45-f02f742e8921"/>
+<ref refid="bfe66c41-97f8-11ee-a428-f02f742e8921"/>
+<ref refid="ce3e4bbd-97f8-11ee-9ab0-f02f742e8921"/>
+<ref refid="d8e55d4a-97f8-11ee-813d-f02f742e8921"/>
+<ref refid="e3088fc2-97f8-11ee-a661-f02f742e8921"/>
+</reflist>
+</ownedOperation>
+<package>
+<ref refid="58d6c2e8-66f8-11ec-b4c8-0456e5e540ed"/>
+</package>
+<presentation>
+<reflist>
+<ref refid="909b1472-97f8-11ee-9c87-f02f742e8921"/>
+</reflist>
+</presentation>
+</Class>
+<ClassItem id="909b1472-97f8-11ee-9c87-f02f742e8921">
+<matrix>
+<val>(1.0, 0.0, 0.0, 1.0, 213.837393135747, 990.3890478919659)</val>
+</matrix>
+<top-left>
+<val>(0.0, 0.0)</val>
+</top-left>
+<width>
+<val>150.0</val>
+</width>
+<height>
+<val>220.0</val>
+</height>
+<diagram>
+<ref refid="58d6c536-66f8-11ec-b4c8-0456e5e540ed"/>
+</diagram>
+<subject>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</subject>
+</ClassItem>
+<Property id="9f74bd47-97f8-11ee-af0c-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>rowCount</val>
+</name>
+<typeValue>
+<val>int</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Property id="a720d97d-97f8-11ee-8bde-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>columnCount</val>
+</name>
+<typeValue>
+<val>int</val>
+</typeValue>
+<visibility>
+<val>private</val>
+</visibility>
+</Property>
+<Operation id="b0a90c6c-97f8-11ee-bd96-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>Options</val>
+</name>
+</Operation>
+<Operation id="b9494ed3-97f8-11ee-ab45-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>Options</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="b94a60c0-97f8-11ee-8b23-f02f742e8921"/>
+<ref refid="b94b241e-97f8-11ee-98c3-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="b94a60c0-97f8-11ee-8b23-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="b9494ed3-97f8-11ee-ab45-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Parameter id="b94b241e-97f8-11ee-98c3-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="b9494ed3-97f8-11ee-ab45-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="bfe66c41-97f8-11ee-a428-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>getRowCount</val>
+</name>
+</Operation>
+<Operation id="ce3e4bbd-97f8-11ee-9ab0-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>getColumnCount</val>
+</name>
+</Operation>
+<Operation id="d8e55d4a-97f8-11ee-813d-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>setRowCount</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="d8e66f9c-97f8-11ee-9831-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="d8e66f9c-97f8-11ee-9831-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="d8e55d4a-97f8-11ee-813d-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
+<Operation id="e3088fc2-97f8-11ee-a661-f02f742e8921">
+<class_>
+<ref refid="909aed54-97f8-11ee-9957-f02f742e8921"/>
+</class_>
+<name>
+<val>setColumnCount</val>
+</name>
+<ownedParameter>
+<reflist>
+<ref refid="e3097a7e-97f8-11ee-b9a4-f02f742e8921"/>
+</reflist>
+</ownedParameter>
+</Operation>
+<Parameter id="e3097a7e-97f8-11ee-b9a4-f02f742e8921">
+<direction>
+<val>in</val>
+</direction>
+<name>
+<val>int</val>
+</name>
+<ownerFormalParam>
+<ref refid="e3088fc2-97f8-11ee-a661-f02f742e8921"/>
+</ownerFormalParam>
+</Parameter>
 </gaphor>
